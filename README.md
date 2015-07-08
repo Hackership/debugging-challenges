@@ -5,7 +5,6 @@ Please choose the language you want to learn to debug with. We offer:
   - [Javascript](./Javascript/README.md): in-browser debugging using the [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools/Debugger)
   - [Python](./Python/README.md): debugging a terminal python script using the build-in [PDB](https://docs.python.org/2/library/pdb.html)
   - [Ruby](./Ruby/README.md): debugging a terminal ruby programme using [pry](http://pryrepl.org/)
-  - [NodeJS](./NodeJS/README.md): debugging a terminal node program using [node debugger](https://nodejs.org/api/debugger.html)
 
 ### Presentation
 
