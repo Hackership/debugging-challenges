@@ -1,12 +1,23 @@
-people = [{name: "Anna", age: 8}, {name: "Kim", age: 18}, {name: "Peter", age: nil}, {name: "Jonathan", age: 26}, {name: "Lola", age: nil}, {name: "Hank", age: 12}, {name: "Casper", age:23}]
-clean_people = []
+require 'pry'
+people = [{name: "Anna", age: 12},
+          {name: "Kim", age: 18},
+          {name: "Peter"},
+          {name: "Jonathan", age: 26},
+          {name: "Lola"},
+          {name: "Hank", age: 12},
+          {name: "Casper", age: 23}]
 
-#Only include those people where age is given
+
+# create a map fo names => age of only the people, where we have an age given
+people_with_age_map = {}
+
+
+#pry.binding
+
 people.each do |person|
-  if person["age"].kind_of? Object
-   clean_people.push(person)
+  if age = person[:age] && name = person[:name]
+   people_with_age_map[name] = age
   end
 end
 
-puts(clean_people)
-
+puts(people_with_age_map)
