@@ -1,0 +1,49 @@
+
+<html>
+<body>
+
+
+<h1>Who is older?</h1>
+<p>How old are you? <input id="inp" type="number"> </p>
+<p>These people are older:</p>
+<ul id="results">
+</ul>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+$(function(){
+  var people = [{name: "Anna", age: 23},
+              {name: "Kim", age: 22},
+              {name: "Peter", age: 19},
+              {name: "Michelle", age: 12},
+              {name: "Jonathan", age: 26},
+              {name: "Lola", age: 18},
+              {name: "Hank", age: 22}];
+
+  var mapped = {};
+  // mapped name to comparing function of their name
+  //
+  for (var iter = 0; iter < people.length; iter++){
+    var age = people[iter].age;
+	mapped[people[iter].name] = function comparator(compare){
+        return age - compare;
+    };
+  }
+
+  $('#inp').on("change", function(){
+    var input = Number($("#inp").val()),
+        resp = [];
+    for (name in mapped){
+      if (mapped[name](input) > 0){
+        resp.push("<li>" + name + "</li>");
+      }
+    }
+    $("#results").html(resp.join("\n"))
+  });
+});
+
+</script>
+</html>
