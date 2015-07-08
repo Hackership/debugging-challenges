@@ -11,7 +11,7 @@ https://developer.mozilla.org/en-US/docs/Tools/Debugger
 
 ### The Challenge
 
-Alright then, let's take a look at the challenge. Open the file `debug-challenge.html`. It is a tiny part of a bigger web-app, where a custom code compares the input age with the age of a list of participants. For reasons unkown, once you surpass the number 22 all disappear. Try to reproduce the bug.
+Alright then, let's take a look at the challenge. Open the file [`debug-challenge.html`](http://htmlpreview.github.io/?https://github.com/Hackership/debugging-challenges/blob/master/Javascript/debug-challenge.html). It is a tiny part of a bigger web-app, where a custom code compares the input age with the age of a list of participants. For reasons unkown, once you surpass the number 22 all disappear. Try to reproduce the bug.
 
 Now open the developer tools in Firefox. In there select the html-file and set a break-point (click on the line number) in line 39 (`for (name in mapped){`). Now change the value of the input field again and the panel on the right appears. You are now inside the execution, looking at the state/environment on the right, can look at the call stack on the left, can step through with the features on the top right and investigate what is going on.
 
@@ -22,4 +22,4 @@ If you keep the debugger open, when reloading the website, break points are pres
 
  - MDN has an amazing explanation and tutorial of the entire developer tools and its features, highly recommended: https://developer.mozilla.org/en-US/docs/Tools/Debugger
  - Chrome also has similar devtools, explained here: https://developer.chrome.com/devtools
- 
+
