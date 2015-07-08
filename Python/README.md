@@ -3,7 +3,7 @@
 
 The Python DeBugger (PDB) is a built-in module in the C-Python interpreters standard library. Thus you can import and use it in any python file. Just add `import pdb; pdb.set_trace()` anywhere to create a break point and arrive in an interactive REPL.
 
-IMAGE
+![Python Debugger Shell](https://s3.amazonaws.com/media-p.slid.es/uploads/351278/images/1558210/Screen_Shot_2015-07-08_at_12.44.31.png)
 
 You then have a [set of commands](https://docs.python.org/2/library/pdb.html#debugger-commands) to navigate around, most of them having one letter shortcuts - press enter to execute them. The most important are:
 
