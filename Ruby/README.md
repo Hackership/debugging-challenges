@@ -10,8 +10,14 @@ You then have a [set of commands](https://github.com/pry/pry/wiki/Live-help#the-
  - `whereami`: show the current and surrounding lines of code
  - `ls`: show the list of vars and methods in the current scope.
  - `cd`: move to another context
- - `exit`: stop execution all together
  - `help`: shows you the help for you all commands
+
+To move from the code, install the [`pry-byebug`](https://github.com/deivid-rodriguez/pry-byebug) extension to `pry` and you also have the [following commands](https://github.com/deivid-rodriguez/pry-byebug#execution-commands):
+
+ - `step`: Step execution into the next line or method. Takes an optional numeric argument to step multiple times.
+ - `next`: Step over to the next line within the same frame. Also takes an optional numeric argument to step multiple lines.
+ - `continue`: Continue program execution and end the Pry session.
+
 
 Don't forget that you are in a fully blown ruby interpreter with the current state arround you. Meaning you can write and evalutate any ruby code while you are there, including overloading code, variables and state.
 
@@ -20,7 +26,7 @@ Don't forget that you are in a fully blown ruby interpreter with the current sta
 
 Alright then, let's take a look at the challenge. The function you are having is an object converter, iterating through the items of a list and placing them in a specific format in a hash. Its ouput should give a hash mapping the name to their age, if the age is given (it comes from an external API). A second function call down the line depends on that to show nice ages per name on a website. Unfortunately for reasons unclear, it doesn't show the age but their name again. The author of the other part of the code claims that the dictionary you give them doesn't actually have the age as values.
 
-You can execute the code with ruby directly: `ruby debug-challenge.rb` – if this fails, you need to install `pry` first (`gem pry`). The output shows that this is indeed the case. Uncomment the `pry.binding` in Line 10 and use the above mentioned commands to move around in the execution and examine, what goes wrong and when. Then propose a fix, try to fix it and run it again. Repeat until fixed.
+You can execute the code with ruby directly: `ruby debug-challenge.rb` – if this fails, you need to install `pry` first (`gem pry`). The output shows that this is indeed the case. Uncomment the `binding.pry` in Line 10 and use the above mentioned commands to move around in the execution and examine, what goes wrong and when. Now type `break 19` and `continue` to set another breakpoint and continue execution (if this fails also install `gem pry-byebug`).  Then propose a fix, try to fix it and run it again. Repeat until fixed.
 
 
 ### Further Reading

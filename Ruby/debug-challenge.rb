@@ -12,7 +12,7 @@ people = [{name: "Anna", age: 12},
 people_with_age_map = {}
 
 
-#pry.binding
+#binding.pry
 
 people.each do |person|
   if age = person[:age] && name = person[:name]
